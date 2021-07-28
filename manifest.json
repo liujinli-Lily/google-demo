@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "change title",
+  "description": "change title",
+  "version": "1.0",
+
+  "permissions": ["management", "notifications"],
+  "browser_action": {
+    "default_icon": "icon-2.png",
+    "default_title": "change Title",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["myscript.js"],
+      "matches": ["http://dev.wetest.qq.com:8080/*"],
+      "run_at": "document_start"
+    }
+  ]
+}
